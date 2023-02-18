@@ -48,7 +48,7 @@ item1 = Item("Phone", 100, 5) #We create an instance of the class item
 #these are attributes of an instance (item1) of the class Item
 #this makes item1 have datatype of Item
 item1.apply_discount()
-#print(item1.price)
+print(item1.price)
 
 item2 = Item("Laptop", 1000, 3) #We create an instance of the class item
 
