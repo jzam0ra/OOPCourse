@@ -62,3 +62,4 @@ item2.pay_rate = 0.7 #you can also assign a diffrent value of a class attribute 
 Item.instantiate_from_csv()
 print(Item.all)
  
+#this is a test
