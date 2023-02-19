@@ -71,7 +71,20 @@ item2.pay_rate = 0.7 #you can also assign a diffrent value of a class attribute 
 #print(Item.__dict__) gives all the attributes for class level
 #print(item1.__dict__) gives all the attributes for instance level
 
-Item.instantiate_from_csv()
-print(Item.all)
-
+#Item.instantiate_from_csv()
+#print(Item.all)
 Item.is_integer(7.05)
+
+class Phone(Item):
+    pass
+# if we were to define this attribute for
+# determine the amount of broken phones of a type,
+# we want to create a method that calculates the phones
+# that aren't broken. This is in principle hard to calculate 
+#because it isn't an attribute assigned to self in class Item
+# That's the reason why we create a new Phone class that inherites
+# the item class properties
+phone1 = Item("jscPhonev10", 500, 5)
+phone1.broken_phones = 1 
+phone2 = Item("jscPhonev20",700,5)
+phone2.broken_phones = 1
