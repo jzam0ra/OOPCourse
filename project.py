@@ -39,6 +39,18 @@ class Item: # a function inside a class is called a method
                 quantity = int(item.get('quantity'))
             )
 
+
+    @staticmethod    # A static method has a logical connection to a class. The static methods never send in the background the instance as the first argument. Static methods never send object as argument
+    def is_integer(num):
+        # we will count the floats that are point zero, e.g. 5.0
+        if isinstance(num, float):
+            #count the floats that are decimal
+            return num.is_integer()
+        elif isinstance(num, int):
+            return True
+        else:
+            return False
+
     def __repr__(self) -> str:
         return f"Item('{self.name}',{self.price},{self.quantity})"
 
@@ -61,5 +73,5 @@ item2.pay_rate = 0.7 #you can also assign a diffrent value of a class attribute 
 
 Item.instantiate_from_csv()
 print(Item.all)
- 
-#this is a test
+
+Item.is_integer(7.05)
